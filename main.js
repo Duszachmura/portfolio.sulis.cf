@@ -16,7 +16,7 @@ camera.position.setZ(30);
 
 renderer.render(scene,camera);
 
-const torusTexture = new THREE.TextureLoader().load('src/cat.jpg')
+const torusTexture = new THREE.TextureLoader().load('assets/cat.jpg')
 const torus = new THREE.Mesh(
   new THREE.TorusGeometry(10,3,16,100),
   new THREE.MeshBasicMaterial({map: torusTexture})
