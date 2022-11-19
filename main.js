@@ -16,7 +16,7 @@ camera.position.setZ(30);
 
 renderer.render(scene,camera);
 
-const torusTexture = new THREE.TextureLoader().load('assets/cat.jpg')
+const torusTexture = new THREE.TextureLoader().load('/cat.jpg')
 const torus = new THREE.Mesh(
   new THREE.TorusGeometry(10,3,16,100),
   new THREE.MeshBasicMaterial({map: torusTexture})
@@ -51,18 +51,18 @@ function addStar(){
 
 Array(200).fill().forEach(addStar)
 
- const spaceTexture = new THREE.TextureLoader().load('src/space.jpg');
+ const spaceTexture = new THREE.TextureLoader().load('/space.jpg');
  scene.background = spaceTexture;
 
- const foxTexture = new THREE.TextureLoader().load('src/fox.jpg');
+ const foxTexture = new THREE.TextureLoader().load('/fox.jpg');
  const fox = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({map: foxTexture})
  );
  scene.add(fox);
 
- const moonTexture = new THREE.TextureLoader().load('src/sea.jpg');
- const normalTexture = new THREE.TextureLoader().load('src/normal.jpg');
+ const moonTexture = new THREE.TextureLoader().load('/sea.jpg');
+ const normalTexture = new THREE.TextureLoader().load('/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
